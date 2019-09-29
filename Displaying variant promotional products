@@ -1,0 +1,8 @@
+$params = array(
+'posts_per_page' => 5,
+'post_type' => array('product', 'product_variation'),
+'meta_key' => '_sale_price',
+'meta_value' => 0,
+'meta_compare' => '>='
+'meta_type' => 'NUMERIC'
+);
