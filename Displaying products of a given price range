@@ -1,0 +1,19 @@
+$params = array(
+        'posts_per_page' => 100,
+        'post_type' => array('product', 'product_variation'),
+        'meta_query' => array(
+            'relation' => 'OR',
+            array(
+                'key' => '_price',
+                'value' => 5,
+                'compare' => '<=',
+                'type' => 'NUMERIC'
+            ),
+            array(
+                'key' => '_sales_price',
+                'value' => 5,
+                'compare' => '<=',
+                'type' => 'NUMERIC'
+            )
+        )
+);
