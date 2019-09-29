@@ -1,0 +1,15 @@
+<?php
+$params = array('posts_per_page' => 5); // (1)
+$wc_query = new WP_Query($params); // (2)
+?>
+<?php if ($wc_query->have_posts()) : // (3) ?>
+<?php while ($wc_query->have_posts()) : // (4)
+                $wc_query->the_post(); // (4.1) ?>
+<?php the_title(); // (4.2) ?>
+<?php endwhile; ?>
+<?php wp_reset_postdata(); // (5) ?>
+<?php else:  ?>
+<p>
+     <?php _e( 'No Products' ); // (6) ?>
+</p>
+<?php endif; ?>
