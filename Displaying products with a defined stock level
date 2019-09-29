@@ -1,0 +1,12 @@
+$params = array(
+        'posts_per_page' => 100,
+        'post_type' => array('product', 'product_variation'),
+        'meta_query' => array(
+            array(
+                'key' => '_stock',
+                'value' => 5,
+                'compare' => '>',
+                'type' => 'NUMERIC'
+            )
+        )
+);
