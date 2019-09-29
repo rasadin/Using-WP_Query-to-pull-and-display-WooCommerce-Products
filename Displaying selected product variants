@@ -1,0 +1,20 @@
+And to finish off this article, here’s something very simple but still noteworthy; a method for displaying a particular product’s variants:
+
+$params = array(
+        'posts_per_page' => 5,
+        'post_type' => array('product_variation'),
+        'post_parent' => 15
+);
+
+
+
+
+In this code we use the fact that product variants, as well as a post type variable, also set a field to the ID value of the parent-product. So in the above example we display up to 5 product variants that have an ID equal to 15; a great function if you’ve got a lot of interesting variants to sell! Of course, as with all types of posts, we may add multiple parent-product IDs as an array to the parameter:
+
+
+
+$params = array(
+        'posts_per_page' => 5,
+        'post_type' => array('product_variation'),
+        'post_parent' => array(15, 25)
+);
