@@ -1,0 +1,35 @@
+$params = array(
+        'posts_per_page' => 5,
+        'post_type' => array('product', 'product_variation'),
+        'meta_query' => array(
+            'relation' => 'OR',
+            array(
+                array(
+                    'key' => '_price',
+                    'value' => 10,
+                    'compare' => '>=',
+                    'type' => 'NUMERIC'
+                ),
+                array(
+                    'key' => '_price',
+                    'value' => 15,
+                    'compare' => '<=',
+                    'type' => 'NUMERIC'
+                )
+            ),
+            array(
+                array(
+                    'key' => '_sale_price',
+                    'value' => 10,
+                    'compare' => '>=',
+                    'type' => 'NUMERIC'
+                ),
+                array(
+                    'key' => '_sale_price',
+                    'value' => 15,
+                    'compare' => '<=',
+                    'type' => 'NUMERIC'
+                )
+            )
+        )
+);
